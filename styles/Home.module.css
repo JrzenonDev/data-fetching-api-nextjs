@@ -122,6 +122,19 @@
   margin-right: .5em;
 }
 
+.profile {
+  display: flex;
+  margin-top: 2em;
+}
+
+.profileImage {
+  margin-right: 2em;
+}
+
+.profileDetailes {
+
+}
+
 @media (prefers-color-scheme: dark) {
   .card,
   .footer {
