@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
 
@@ -111,13 +112,15 @@ export default function Home({ data }) {
                   key={id}
                   className={styles.card}
                 >
-                  <a href="https://nextjs.org/docs">
-                    <img src={image} alt={name} />
-                    <h2>{name}</h2>
-                    <p>
-                      <strong>origin: </strong>{origin.name}
-                    </p>
-                  </a>
+                  <Link href='character/[id]' as={`/character/${id}`}>
+                    <a>
+                      <img src={image} alt={name} />
+                      <h2>{name}</h2>
+                      <p>
+                        <strong>origin: </strong>{origin.name}
+                      </p>
+                    </a>
+                  </Link>
                 </li>
               </>
             )
